@@ -85,32 +85,32 @@
     <message>
         <location filename="../qml/pages/HomePage.qml" line="17"/>
         <source>About</source>
-        <translation type="unfinished">关于</translation>
+        <translation>关于</translation>
     </message>
     <message>
         <location filename="../qml/pages/HomePage.qml" line="22"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>设置</translation>
     </message>
     <message>
         <location filename="../qml/pages/HomePage.qml" line="27"/>
         <source>Add a new Code</source>
-        <translation type="unfinished"></translation>
+        <translation>添加新代码</translation>
     </message>
     <message>
         <location filename="../qml/pages/HomePage.qml" line="39"/>
         <source>Barcodes</source>
-        <translation type="unfinished"></translation>
+        <translation>条形码</translation>
     </message>
     <message>
         <location filename="../qml/pages/HomePage.qml" line="79"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>编辑</translation>
     </message>
     <message>
         <location filename="../qml/pages/HomePage.qml" line="84"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>移除</translation>
     </message>
 </context>
 <context>
@@ -118,32 +118,32 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="29"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>设置</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="35"/>
         <source>Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation>方向</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="36"/>
         <source>How the barcode should be displayed</source>
-        <translation type="unfinished"></translation>
+        <translation>条形码应如何显示？</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="42"/>
         <source>Dynamic</source>
-        <translation type="unfinished"></translation>
+        <translation>动态</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="45"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>横屏</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="48"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>竖屏</translation>
     </message>
 </context>
 </TS>
