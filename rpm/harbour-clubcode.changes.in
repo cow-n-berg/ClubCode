@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sat Mar 30 2019 Arno Dekker <jack.tar@example.com> 0.3-11
+- Chinese translation updated
+- Small changes in about- and coverpage
 * Fri Mar 29 2019 Arno Dekker <jack.tar@example.com> 0.3-10
 - Chinese translation added
 - Setting for orientation barcode display

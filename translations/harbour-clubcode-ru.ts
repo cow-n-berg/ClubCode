@@ -9,12 +9,12 @@
         <translation>О программе</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="34"/>
+        <location filename="../qml/pages/About.qml" line="56"/>
         <source>Generate barcodes by entering a code.&lt;p&gt;                 &lt;b&gt;Supports:&lt;/b&gt; Code 128, Code 39, Code 93, UPC-E, EAN-8 and EAN-13.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="44"/>
+        <location filename="../qml/pages/About.qml" line="66"/>
         <source>Author</source>
         <translation>Автор</translation>
     </message>
