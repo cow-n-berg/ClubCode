@@ -1,53 +1,43 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-
-Page
-{
+Page {
     id: page
 
-    SilicaFlickable
-    {
+    SilicaFlickable {
         anchors.fill: parent
 
-        PullDownMenu
-        {
-            MenuItem
-            {
+        PullDownMenu {
+            MenuItem {
                 text: qsTr("About")
                 onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
             }
-            MenuItem
-            {
+            MenuItem {
                 text: qsTr("Settings")
                 onClicked: pageStack.push(Qt.resolvedUrl("SettingPage.qml"))
             }
-            MenuItem
-            {
+            MenuItem {
                 text: qsTr("Add a new Code")
                 onClicked: pageStack.push(Qt.resolvedUrl("AddNewCodePage.qml"))
             }
         }
 
-        SilicaListView
-        {
+        SilicaListView {
             anchors.fill: parent
             model: main.codes
-            spacing: 7
-            header: PageHeader
-            {
+            spacing: 10
+            header: PageHeader {
                 title: qsTr("Barcodes")
             }
 
             VerticalScrollDecorator {
             }
 
-            delegate: Item
-            {
+            delegate: ListItem {
 
-                width: page.width
-                height: menu.active ? menu.height + 130 * mainApp.sizeRatio: 130 * mainApp.sizeRatio
                 id: item
+                width: ListView.view.width
+                contentHeight: Theme.itemSizeLarge // two line delegate
 
                 function getFontName() {
                     if (modelData.barcodeType === "0") {
@@ -70,67 +60,66 @@ Page
                     }
                 }
 
-                ContextMenu
-                {
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("ViewCodePage.qml"), {
+                                       "current": modelData
+                                   })
+                }
+
+                onPressAndHold: menu.active ? menu.hide() : menu.open(item)
+
+                menu: ContextMenu {
                     id: menu
 
-                    MenuItem
-                    {
+                    MenuItem {
                         text: qsTr("Edit")
-                        onClicked: pageStack.push(Qt.resolvedUrl("EditCodePage.qml"), { current: modelData })
+                        onClicked: pageStack.push(Qt.resolvedUrl(
+                                                      "EditCodePage.qml"), {
+                                                      "current": modelData
+                                                  })
                     }
-                    MenuItem
-                    {
+                    MenuItem {
                         text: qsTr("Remove")
-                        onClicked: Remorse.itemAction(item, "Deleting", function() { main.removeCode(modelData) } )
+                        onClicked: Remorse.itemAction(item, "Deleting",
+                                                      function () {
+                                                          main.removeCode(
+                                                                      modelData)
+                                                      })
                     }
                 }
 
-                Rectangle
-                {
-                    height: 130 * mainApp.sizeRatio
+                Rectangle {
+                    height: Theme.itemSizeLarge
                     width: parent.width
                     color: "white"
 
-
-                    Label
-                    {
+                    Label {
                         color: "gray"
                         font.family: getFontName()
                         anchors.centerIn: parent
-                        font.pixelSize: 100 * mainApp.sizeRatio
-                        text: modelData.generateCode(modelData.code, modelData.barcodeType)
+                        font.pixelSize: parent.height * .75
+                        text: modelData.generateCode(modelData.code,
+                                                     modelData.barcodeType)
                         font.letterSpacing: 0
-                        opacity: 0.3
+                        opacity: 0.4
                         anchors.verticalCenterOffset: -6
                     }
 
-                    Column
-                    {
+                    Column {
                         anchors.centerIn: parent
 
-                        Label
-                        {
+                        Label {
                             text: modelData.name
                             color: "black"
                             font.bold: true
                             anchors.horizontalCenter: parent.horizontalCenter
                         }
 
-                        Label
-                        {
+                        Label {
                             text: modelData.description
                             color: "black"
                             anchors.horizontalCenter: parent.horizontalCenter
                         }
-                    }
-
-                    BackgroundItem
-                    {
-                        width: parent.width
-                        height: parent.height
-                        onClicked: pageStack.push(Qt.resolvedUrl("ViewCodePage.qml"), { current: modelData })
-                        onPressAndHold: menu.open(item)
                     }
                 }
             }

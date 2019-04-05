@@ -83,32 +83,32 @@
 <context>
     <name>HomePage</name>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="17"/>
+        <location filename="../qml/pages/HomePage.qml" line="12"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="22"/>
+        <location filename="../qml/pages/HomePage.qml" line="16"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="27"/>
+        <location filename="../qml/pages/HomePage.qml" line="20"/>
         <source>Add a new Code</source>
         <translation>添加新代码</translation>
     </message>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="39"/>
+        <location filename="../qml/pages/HomePage.qml" line="30"/>
         <source>Barcodes</source>
         <translation>条形码</translation>
     </message>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="79"/>
+        <location filename="../qml/pages/HomePage.qml" line="75"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="84"/>
+        <location filename="../qml/pages/HomePage.qml" line="82"/>
         <source>Remove</source>
         <translation>移除</translation>
     </message>
