@@ -8,6 +8,8 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sun Apr 07 2019 Arno Dekker <jack.tar@example.com> 0.3-13
+- French translation thanks Quenty31
 * Fri Apr 05 2019 Arno Dekker <jack.tar@example.com> 0.3-12
 - Fixed context open/close animation, slightly smaller barcode preview
 * Sat Mar 30 2019 Arno Dekker <jack.tar@example.com> 0.3-11

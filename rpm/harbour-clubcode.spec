@@ -14,7 +14,7 @@ Name:       harbour-clubcode
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    ClubCode is an app to save club card barcodes
 Version:    0.3
-Release:    12
+Release:    13
 Group:      Qt/Qt
 License:    GPLv3
 URL:        http://example.org/

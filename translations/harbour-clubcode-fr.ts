@@ -133,7 +133,7 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="42"/>
         <source>Dynamic</source>
-        <translation><Dynamique/translation>
+        <translation>Dynamique</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="45"/>
