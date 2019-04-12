@@ -54,7 +54,7 @@ Page {
             }
             Label {
                 text: qsTr("Generate barcodes by entering a code.<p> \
-                <b>Supports:</b> Code 128, Code 39, Code 93, UPC-E, EAN-8 and EAN-13.")
+                <b>Supports:</b> Code 128, Code 39, Code 93, UPC-A, UPC-E, EAN-8 and EAN-13.")
                 font.pixelSize: Theme.fontSizeSmall
                 width: parent.width
                 horizontalAlignment: Text.Center

@@ -4,6 +4,7 @@
         <file>code39.ttf</file>
         <file>code93.ttf</file>
         <file>ean13.ttf</file>
+        <file>upc-a.ttf</file>
         <file>upc-e.ttf</file>
     </qresource>
 </RCC>

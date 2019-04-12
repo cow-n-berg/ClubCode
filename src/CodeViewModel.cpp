@@ -317,6 +317,25 @@ QString CodeViewModel::generateCode(QString code, QString barcodeType) {
         }
         encoded = barcode;
     }
+    if ( barcodeType == "6" ) {  // UPC-A
+        // 12 digits
+        // leading number
+        barcode = barcode + static_cast<char>(32 + code.at(0).toLatin1());
+        // next 5
+        int i;
+        for ( i = 1; i < 6; i+=1 ) {
+            barcode = barcode + code.at(i);
+        }
+        // separator
+        barcode = barcode + "p";
+        // next 5
+        for ( i = 6; i < 11; i+=1 ) {
+            barcode = barcode + static_cast<char>(16 + code.at(i).toLatin1());
+        }
+        // trailing number
+        barcode = barcode + static_cast<char>(48 + code.at(11).toLatin1());
+        encoded = barcode;
+    }
     return encoded;
 }
 

@@ -8,4 +8,5 @@ _Currently supported barcode types:_
 * Code 128
 * EAN-8
 * EAN-13
+* UPC-A
 * UPC-E

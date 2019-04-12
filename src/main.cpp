@@ -28,6 +28,7 @@ int main(int argc, char *argv[]) {
     fontDatabase.addApplicationFont(":/fonts/ean13.ttf");
     fontDatabase.addApplicationFont(":/fonts/code39.ttf");
     fontDatabase.addApplicationFont(":/fonts/code93.ttf");
+    fontDatabase.addApplicationFont(":/fonts/upc-a.ttf");
     fontDatabase.addApplicationFont(":/fonts/upc-e.ttf");
 
     qmlRegisterType<Settings>("harbour.clubcode.Settings", 1 , 0 , "MySettings");

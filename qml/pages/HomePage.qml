@@ -58,6 +58,9 @@ Page {
                     if (modelData.barcodeType === "5") {
                         return "UPC-E Short"
                     }
+                    if (modelData.barcodeType === "6") {
+                        return "UPC-A"
+                    }
                 }
 
                 onClicked: {

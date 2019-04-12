@@ -10,7 +10,7 @@
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="56"/>
-        <source>Generate barcodes by entering a code.&lt;p&gt;                 &lt;b&gt;Supports:&lt;/b&gt; Code 128, Code 39, Code 93, UPC-E, EAN-8 and EAN-13.</source>
+        <source>Generate barcodes by entering a code.&lt;p&gt;                 &lt;b&gt;Supports:&lt;/b&gt; Code 128, Code 39, Code 93, UPC-A, UPC-E, EAN-8 and EAN-13.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -30,52 +30,57 @@
 <context>
     <name>EditCodeTemplate</name>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="49"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="52"/>
         <source>Barcode type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="53"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="56"/>
         <source>Code 128</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="56"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="59"/>
         <source>EAN 8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="59"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="62"/>
         <source>EAN 13</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="62"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="65"/>
         <source>Code 39</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="65"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="68"/>
         <source>Code 93</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="68"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="71"/>
         <source>UPC-E</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="80"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="74"/>
+        <source>UPC-A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/EditCodeTemplate.qml" line="86"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="102"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="108"/>
         <source>Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="125"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="131"/>
         <source>Code</source>
         <translation type="unfinished"></translation>
     </message>
@@ -103,12 +108,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="75"/>
+        <location filename="../qml/pages/HomePage.qml" line="78"/>
         <source>Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="82"/>
+        <location filename="../qml/pages/HomePage.qml" line="85"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
