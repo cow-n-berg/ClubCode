@@ -1,6 +1,7 @@
 TARGET = harbour-clubcode
 
 CONFIG += sailfishapp
+DEPLOYMENT_PATH = /usr/share/$${TARGET}
 
 SOURCES += \
     src/MainViewModel.cpp \
@@ -26,12 +27,12 @@ OTHER_FILES += \
     rpm/harbour-clubcode.spec \
     harbour-clubcode.desktop
 
-CONFIG += sailfishapp_i18n
 INSTALLS += translations
 
 TRANSLATIONS = translations/harbour-clubcode-ru.ts \
                translations/harbour-clubcode-zh_cn.ts \
-               translations/harbour-clubcode-fr.ts
+               translations/harbour-clubcode-fr.ts \
+               translations/harbour-clubcode-cs.ts
 
 HEADERS += \
     src/MainViewModel.h \
@@ -51,6 +52,9 @@ lupdate_only {
     SOURCES = qml/*.qml \
               qml/pages/*.qml
 }
+
+translations.files = translations
+translations.path = $${DEPLOYMENT_PATH}
 
 INSTALLS += resources
 
