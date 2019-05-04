@@ -13,15 +13,20 @@
 #include "BarcodeImageProvider.h"
 #include "EditCodePageViewModel.h"
 #include "settings.h"
+#include "QrCodeGenerator.h"
+#include "QrCodeImageProvider.h"
 
 
 int main(int argc, char *argv[]) {
-    qmlRegisterType<MainViewModel>("harbour.clubcode", 0, 1, "MainViewModel");
-    qmlRegisterType<AddNewCodePageViewModel>("harbour.clubcode", 0, 1, "AddNewCodePageViewModel");
-    qmlRegisterType<EditCodePageViewModel>("harbour.clubcode", 0, 1, "EditCodePageViewModel");
+    qmlRegisterType<MainViewModel>("harbour.clubcode", 1, 0, "MainViewModel");
+    qmlRegisterType<AddNewCodePageViewModel>("harbour.clubcode", 1, 0, "AddNewCodePageViewModel");
+    qmlRegisterType<EditCodePageViewModel>("harbour.clubcode", 1, 0, "EditCodePageViewModel");
+    qmlRegisterType<QrCodeGenerator>("harbour.clubcode", 1, 0, "QrCodeGenerator");
 
     QGuiApplication *application = SailfishApp::application(argc, argv);
     QQuickView *view = SailfishApp::createView();
+    QQmlContext* context = view->rootContext();
+    QQmlEngine* engine = context->engine();
 
     QFontDatabase fontDatabase;
     fontDatabase.addApplicationFont(":/fonts/code128.ttf");
@@ -30,6 +35,8 @@ int main(int argc, char *argv[]) {
     fontDatabase.addApplicationFont(":/fonts/code93.ttf");
     fontDatabase.addApplicationFont(":/fonts/upc-a.ttf");
     fontDatabase.addApplicationFont(":/fonts/upc-e.ttf");
+
+    engine->addImageProvider("qrcode", new QrCodeImageProvider);
 
     qmlRegisterType<Settings>("harbour.clubcode.Settings", 1 , 0 , "MySettings");
 

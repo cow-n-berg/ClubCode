@@ -1,18 +1,24 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.clubcode.Settings 1.0
+import harbour.clubcode 1.0
 
 Page {
+    id: page
+
     property variant current
-    property real fullsize: 260 * mainApp.sizeRatio
     property int orientationSetting: (Orientation.Portrait | Orientation.Landscape
                                       | Orientation.LandscapeInverted)
     allowedOrientations: orientationSetting
 
-    id: page
-
     MySettings {
         id: myset
+    }
+
+    QrCodeGenerator {
+        id: generator
+
+        text: current.code
     }
 
     Component.onCompleted: {
@@ -33,38 +39,10 @@ Page {
     }
 
     function resize_barcode() {
-        if (barlabel.font.pixelSize === (260 * mainApp.sizeRatio)) {
-            barlabel.font.pixelSize = barlabel.font.pixelSize / 2
-        } else if (barlabel.font.pixelSize === (130 * mainApp.sizeRatio)) {
-            barlabel.font.pixelSize = barlabel.font.pixelSize / 2
-        } else if (barlabel.font.pixelSize === (65 * mainApp.sizeRatio)) {
-            barlabel.font.pixelSize = barlabel.font.pixelSize / 1.5
+        if (qrcodeImage.scale === 1) {
+            qrcodeImage.scale = 0.5
         } else {
-            barlabel.font.pixelSize = fullsize
-        }
-    }
-
-    function getFontName() {
-        if (current.barcodeType === "0") {
-            return "Code 128"
-        }
-        if (current.barcodeType === "1") {
-            return "Code EAN13"
-        }
-        if (current.barcodeType === "2") {
-            return "Code EAN13"
-        }
-        if (current.barcodeType === "3") {
-            return "Bar-Code 39"
-        }
-        if (current.barcodeType === "4") {
-            return "Code-93"
-        }
-        if (current.barcodeType === "5") {
-            return "UPC-E Short"
-        }
-        if (current.barcodeType === "6") {
-            return "UPC-A"
+            qrcodeImage.scale = 1
         }
     }
 
@@ -93,29 +71,34 @@ Page {
                 color: "black"
                 font.bold: true
             }
-            Label {
-                id: barlabel
-                color: "black"
-                font.family: getFontName()
-                fontSizeMode: Text.Fit
-                font.pixelSize: 260 * mainApp.sizeRatio
-                width: background.width - 100
-                height: background.height - (Theme.paddingLarge + 100)
+
+            Image {
+                id: qrcodeImage
+                asynchronous: true
+                source: generator.qrcode ? "image://qrcode/" + generator.qrcode : ""
+                readonly property int maxDisplaySize: Math.min(
+                                                          Screen.width,
+                                                          Screen.height) - 4
+                                                      * Theme.horizontalPageMargin
+                readonly property int maxSourceSize: Math.max(sourceSize.width,
+                                                              sourceSize.height)
+                readonly property int n: Math.floor(
+                                             maxDisplaySize / maxSourceSize)
                 horizontalAlignment: Qt.AlignHCenter
                 verticalAlignment: Qt.AlignVCenter
-                text: current.generateCode(current.code, current.barcodeType)
-                font.letterSpacing: 0
+                width: sourceSize.width * n
+                height: sourceSize.height * n
+                smooth: false
                 anchors.horizontalCenter: parent.horizontalCenter
             }
-
             Label {
                 anchors.horizontalCenter: parent.horizontalCenter
+                horizontalAlignment: Qt.AlignHCenter
                 font.family: 'monospace'
                 text: current.code
                 color: "black"
-                visible: current.barcodeType === "0"
-                         || current.barcodeType === "3"
-                         || current.barcodeType === "4"
+                wrapMode: Text.WrapAnywhere
+                width: page.width
             }
         }
     }

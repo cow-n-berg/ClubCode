@@ -24,6 +24,8 @@ Column {
     property var valid_upca: RegExpValidator {
         regExp: /^[0-9]{12}$/
     }
+    property var valid_qrcode: RegExpValidator {
+    }
 
     width: parent.width
 
@@ -73,6 +75,9 @@ Column {
             MenuItem {
                 text: qsTr("UPC-A")
             } // 6
+            MenuItem {
+                text: qsTr("QR-Code")
+            } // 7
         }
         Binding {
             target: context
@@ -129,21 +134,23 @@ Column {
     TextField {
         id: code
         placeholderText: qsTr("Code")
-        inputMethodHints:  if (barcode_type.currentIndex === 0) {
-                       Qt.ImhNoPredictiveText
-                   } else if (barcode_type.currentIndex === 1) {
-                       Qt.ImhDigitsOnly
-                   } else if (barcode_type.currentIndex === 2) {
-                       Qt.ImhDigitsOnly
-                   } else if (barcode_type.currentIndex === 3) {
-                       Qt.ImhUppercaseOnly | Qt.ImhNoPredictiveText
-                   } else if (barcode_type.currentIndex === 4) {
-                       Qt.ImhUppercaseOnly | Qt.ImhNoPredictiveText
-                   } else if (barcode_type.currentIndex === 5) {
-                       Qt.ImhDigitsOnly
-                   } else if (barcode_type.currentIndex === 6) {
-                       Qt.ImhDigitsOnly
-                   }
+        inputMethodHints: if (barcode_type.currentIndex === 0) {
+                              Qt.ImhNoPredictiveText
+                          } else if (barcode_type.currentIndex === 1) {
+                              Qt.ImhDigitsOnly
+                          } else if (barcode_type.currentIndex === 2) {
+                              Qt.ImhDigitsOnly
+                          } else if (barcode_type.currentIndex === 3) {
+                              Qt.ImhUppercaseOnly | Qt.ImhNoPredictiveText
+                          } else if (barcode_type.currentIndex === 4) {
+                              Qt.ImhUppercaseOnly | Qt.ImhNoPredictiveText
+                          } else if (barcode_type.currentIndex === 5) {
+                              Qt.ImhDigitsOnly
+                          } else if (barcode_type.currentIndex === 6) {
+                              Qt.ImhDigitsOnly
+                          } else if (barcode_type.currentIndex === 7) {
+                              Qt.ImhNoPredictiveText
+                          }
         EnterKey.enabled: barcode_length()
         validator: if (barcode_type.currentIndex === 0) {
                        valid_code128
@@ -159,6 +166,8 @@ Column {
                        valid_upce
                    } else if (barcode_type.currentIndex === 6) {
                        valid_upca
+                   } else if (barcode_type.currentIndex === 7) {
+                       valid_qrcode
                    }
         label: placeholderText
         width: parent.width

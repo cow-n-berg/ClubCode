@@ -10,3 +10,4 @@ _Currently supported barcode types:_
 * EAN-13
 * UPC-A
 * UPC-E
+* QR-Code

@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.clubcode 1.0
 
 Page {
     id: page
@@ -61,12 +62,21 @@ Page {
                     if (modelData.barcodeType === "6") {
                         return "UPC-A"
                     }
+                    if (modelData.barcodeType === "7") {
+                        return "QR Code"
+                    }
                 }
 
                 onClicked: {
-                    pageStack.push(Qt.resolvedUrl("ViewCodePage.qml"), {
-                                       "current": modelData
-                                   })
+                    if (modelData.barcodeType === "7") {
+                        pageStack.push(Qt.resolvedUrl("QrCodePage.qml"), {
+                                           "current": modelData
+                                       })
+                    } else {
+                        pageStack.push(Qt.resolvedUrl("ViewCodePage.qml"), {
+                                           "current": modelData
+                                       })
+                    }
                 }
 
                 onPressAndHold: menu.active ? menu.hide() : menu.open(item)

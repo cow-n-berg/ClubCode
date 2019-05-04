@@ -10,8 +10,8 @@
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="56"/>
-        <source>Generate barcodes by entering a code.&lt;p&gt;                 &lt;b&gt;Supports:&lt;/b&gt; Code 128, Code 39, Code 93, UPC-A, UPC-E, EAN-8 and EAN-13.</source>
-        <translation>Генерирует штрихкоды по введенному числу.&lt;p&gt;                 &lt;b&gt;Поддерживает:&lt;/b&gt; Code 128, Code 39, UPC-A, UPC-E, EAN-8 and EAN-13.</translation>
+        <source>Generate barcodes by entering a code.&lt;p&gt;                 &lt;b&gt;Supports:&lt;/b&gt; Code 128, Code 39, Code 93, UPC-A, UPC-E, EAN-8, EAN-13 and QR-Code.</source>
+        <translation>Генерирует штрихкоды по введенному числу.&lt;p&gt; &lt;b&gt;Поддерживает:&lt;/b&gt; Code 128, Code 39, UPC-A, UPC-E, EAN-8 EAN-13 and QR-Code.</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="66"/>
@@ -30,57 +30,62 @@
 <context>
     <name>EditCodeTemplate</name>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="52"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="54"/>
         <source>Barcode type</source>
         <translation>Тип штрихкода</translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="56"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="58"/>
         <source>Code 128</source>
         <translation>Code 128</translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="59"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="61"/>
         <source>EAN 8</source>
         <translation>EAN 8</translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="62"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="64"/>
         <source>EAN 13</source>
         <translation>EAN 13</translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="65"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="67"/>
         <source>Code 39</source>
         <translation>Code 39</translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="68"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="70"/>
         <source>Code 93</source>
         <translation type="unfinished">Code 93</translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="71"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="73"/>
         <source>UPC-E</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="74"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="76"/>
         <source>UPC-A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="86"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="79"/>
+        <source>QR-Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/EditCodeTemplate.qml" line="91"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="108"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="113"/>
         <source>Description</source>
         <translation>Описание</translation>
     </message>
     <message>
-        <location filename="../qml/EditCodeTemplate.qml" line="131"/>
+        <location filename="../qml/EditCodeTemplate.qml" line="136"/>
         <source>Code</source>
         <translation>Код</translation>
     </message>
@@ -88,32 +93,32 @@
 <context>
     <name>HomePage</name>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="12"/>
+        <location filename="../qml/pages/HomePage.qml" line="13"/>
         <source>About</source>
         <translation type="unfinished">О программе</translation>
     </message>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="16"/>
+        <location filename="../qml/pages/HomePage.qml" line="17"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="20"/>
+        <location filename="../qml/pages/HomePage.qml" line="21"/>
         <source>Add a new Code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="30"/>
+        <location filename="../qml/pages/HomePage.qml" line="31"/>
         <source>Barcodes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="78"/>
+        <location filename="../qml/pages/HomePage.qml" line="88"/>
         <source>Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/HomePage.qml" line="85"/>
+        <location filename="../qml/pages/HomePage.qml" line="95"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
