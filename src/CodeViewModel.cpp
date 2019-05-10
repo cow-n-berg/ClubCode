@@ -336,6 +336,9 @@ QString CodeViewModel::generateCode(QString code, QString barcodeType) {
         barcode = barcode + static_cast<char>(48 + code.at(11).toLatin1());
         encoded = barcode;
     }
+    if ( barcodeType == "8" ) {  // KIX
+        encoded = code;
+    }
     return encoded;
 }
 

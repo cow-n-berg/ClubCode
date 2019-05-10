@@ -63,7 +63,10 @@ Page {
                         return "UPC-A"
                     }
                     if (modelData.barcodeType === "7") {
-                        return "QR Code"
+                        return "QR font tfb"
+                    }
+                    if (modelData.barcodeType === "8") {
+                        return "KIX Barcode"
                     }
                 }
 
@@ -111,7 +114,7 @@ Page {
                         font.family: getFontName()
                         anchors.centerIn: parent
                         font.pixelSize: parent.height * .75
-                        text: modelData.generateCode(modelData.code,
+                        text: modelData.barcodeType === "7" ? "A" : modelData.generateCode(modelData.code,
                                                      modelData.barcodeType)
                         font.letterSpacing: 0
                         opacity: 0.4

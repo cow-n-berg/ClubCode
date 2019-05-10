@@ -66,6 +66,9 @@ Page {
         if (current.barcodeType === "6") {
             return "UPC-A"
         }
+        if (current.barcodeType === "8") {
+            return "KIX Barcode"
+        }
     }
 
     Rectangle {
@@ -116,6 +119,7 @@ Page {
                 visible: current.barcodeType === "0"
                          || current.barcodeType === "3"
                          || current.barcodeType === "4"
+                         || current.barcodeType === "8"
             }
         }
     }

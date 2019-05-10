@@ -26,6 +26,9 @@ Column {
     }
     property var valid_qrcode: RegExpValidator {
     }
+    property var valid_kix: RegExpValidator {
+        regExp: /^[0-9]{4}[a-zA-Z]{2}[0-9]{1,5}X{0,1}[a-zA-Z0-9]{0,6}$/
+    }
 
     width: parent.width
 
@@ -78,6 +81,9 @@ Column {
             MenuItem {
                 text: qsTr("QR-Code")
             } // 7
+            MenuItem {
+                text: qsTr("KIX")
+            } // 8
         }
         Binding {
             target: context
@@ -150,6 +156,8 @@ Column {
                               Qt.ImhDigitsOnly
                           } else if (barcode_type.currentIndex === 7) {
                               Qt.ImhNoPredictiveText
+                          } else if (barcode_type.currentIndex === 8) {
+                              Qt.ImhNoPredictiveText
                           }
         EnterKey.enabled: barcode_length()
         validator: if (barcode_type.currentIndex === 0) {
@@ -168,6 +176,8 @@ Column {
                        valid_upca
                    } else if (barcode_type.currentIndex === 7) {
                        valid_qrcode
+                   } else if (barcode_type.currentIndex === 8) {
+                       valid_kix
                    }
         label: placeholderText
         width: parent.width

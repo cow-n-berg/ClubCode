@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sat May 04 2019 Arno Dekker <jack.tar@example.com> 0.3-17
+- Added (dummy) QR-code preview on main page
+- Added KIX (Dutch postal barcode)
 * Sat May 04 2019 Arno Dekker <jack.tar@example.com> 0.3-16
 - Added QR-Code, thanks Fukuchi (libqrencode) and Slava Monich (Sailfish implementation)
 * Tue Apr 16 2019 Arno Dekker <jack.tar@example.com> 0.3-15

@@ -6,5 +6,7 @@
         <file>ean13.ttf</file>
         <file>upc-a.ttf</file>
         <file>upc-e.ttf</file>
+        <file>Kixbrg__.ttf</file>
+        <file>QR_font_tfb.ttf</file>
     </qresource>
 </RCC>

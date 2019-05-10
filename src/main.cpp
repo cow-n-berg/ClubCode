@@ -35,6 +35,8 @@ int main(int argc, char *argv[]) {
     fontDatabase.addApplicationFont(":/fonts/code93.ttf");
     fontDatabase.addApplicationFont(":/fonts/upc-a.ttf");
     fontDatabase.addApplicationFont(":/fonts/upc-e.ttf");
+    fontDatabase.addApplicationFont(":/fonts/Kixbrg__.ttf");
+    fontDatabase.addApplicationFont(":/fonts/QR_font_tfb.ttf");
 
     engine->addImageProvider("qrcode", new QrCodeImageProvider);
 

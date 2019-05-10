@@ -11,3 +11,4 @@ _Currently supported barcode types:_
 * UPC-A
 * UPC-E
 * QR-Code
+* KIX
