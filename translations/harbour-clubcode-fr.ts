@@ -11,7 +11,7 @@
     <message>
         <location filename="../qml/pages/About.qml" line="56"/>
         <source>Generate barcodes by entering a code.&lt;p&gt;                 &lt;b&gt;Supports:&lt;/b&gt; Code 128, Code 39, Code 93, UPC-A, UPC-E, EAN-8, EAN-13, QR-Code and KIX.</source>
-        <translation">Génère des codes barres via des codes.&lt;p&gt; &lt;b&gt;Supports:&lt;/b&gt; Code 128, Code 39, Code 93, UPC-A, UPC-E, EAN-8, EAN-13 QR-Code et KIX.</translation>
+        <translation>Génère des codes barres via des codes.&lt;p&gt; &lt;b&gt;Supports:&lt;/b&gt; Code 128, Code 39, Code 93, UPC-A, UPC-E, EAN-8, EAN-13 QR-Code et KIX.</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="66"/>

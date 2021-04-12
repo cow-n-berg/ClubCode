@@ -11,7 +11,7 @@
     <message>
         <location filename="../qml/pages/About.qml" line="56"/>
         <source>Generate barcodes by entering a code.&lt;p&gt;                 &lt;b&gt;Supports:&lt;/b&gt; Code 128, Code 39, Code 93, UPC-A, UPC-E, EAN-8, EAN-13, QR-Code and KIX.</source>
-        <translation">ožením kódu kartičky vygeneruje čárový kód k použití z mobilu &lt;p&gt;&lt;b&gt;Podpora:&lt;/b&gt; Code 128, Code 39, Code 93, UPC-A, UPC-E, EAN-8, EAN-13, QR-Code a KIX.</translation>
+        <translation>ožením kódu kartičky vygeneruje čárový kód k použití z mobilu &lt;p&gt;&lt;b&gt;Podpora:&lt;/b&gt; Code 128, Code 39, Code 93, UPC-A, UPC-E, EAN-8, EAN-13, QR-Code a KIX.</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="66"/>

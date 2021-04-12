@@ -14,10 +14,10 @@ Name:       harbour-clubcode
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    ClubCode is an app to save club card barcodes
 Version:    0.3
-Release:    17
+Release:    18
 Group:      Qt/Qt
 License:    GPLv3
-URL:        http://example.org/
+URL:        https://github.com/a-dekker/ClubCode
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   sailfishsilica-qt5 >= 0.10.9
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
@@ -40,7 +40,7 @@ Short description of my SailfishOS Application
 # >> build pre
 # << build pre
 
-%qtc_qmake5
+%qtc_qmake5 harbour-clubcode.pro
 
 %qtc_make %{?_smp_mflags}
 

@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.1">
 <context>
     <name>About</name>
     <message>
         <source>About</source>
         <translation>О программе</translation>
-    </message>
-    <message>
-        <source>Generate barcodes by entering a code.&lt;p&gt;                 &lt;b&gt;Supports:&lt;/b&gt; Code 128, Code 39, EAN-8 and EAN-13.</source>
-        <translation>Генерирует штрихкоды по введенному числу.&lt;p&gt;                 &lt;b&gt;Поддерживает:&lt;/b&gt; Code 128, Code 39, EAN-8 and EAN-13.</translation>
     </message>
     <message>
         <source>Author</source>

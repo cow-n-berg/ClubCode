@@ -2,6 +2,7 @@
 #include "MainViewModel.h"
 
 #include <QFile>
+#include <QDir>
 #include <QtQml>
 
 MainViewModel::MainViewModel()
@@ -42,7 +43,8 @@ void MainViewModel::removeCode(CodeViewModel *code)
 
 void MainViewModel::load()
 {
-    QFile file("/home/nemo/.local/share/harbour-clubcode/database");
+    QDir dir;
+    QFile file((dir.homePath() + "/.local/share/harbour-clubcode/database"));
 
     if (file.open(QIODevice::ReadOnly))
     {
@@ -67,9 +69,10 @@ void MainViewModel::load()
 
 void MainViewModel::save()
 {
-    QDir::current().mkpath("/home/nemo/.local/share/harbour-clubcode");
+    QDir dir;
+    QDir::current().mkpath(dir.homePath() + "/.local/share/harbour-clubcode");
 
-    QFile file("/home/nemo/.local/share/harbour-clubcode/database");
+    QFile file((dir.homePath() + "/.local/share/harbour-clubcode/database"));
 
     if (file.open(QIODevice::WriteOnly))
     {

@@ -8,6 +8,8 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Mon Apr 12 2021 Arno Dekker <jack.tar@example.com> 0.3-18
+- Do not hardcode nemo user in paths
 * Sat May 04 2019 Arno Dekker <jack.tar@example.com> 0.3-17
 - Added (dummy) QR-code preview on main page
 - Added KIX (Dutch postal barcode)
