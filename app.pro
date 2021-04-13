@@ -54,6 +54,7 @@ INSTALLS += translations
 TRANSLATIONS = translations/harbour-clubcode-ru.ts \
                translations/harbour-clubcode-zh_cn.ts \
                translations/harbour-clubcode-fr.ts \
+               translations/harbour-clubcode-sv.ts \
                translations/harbour-clubcode-cs.ts
 
 HEADERS += \
