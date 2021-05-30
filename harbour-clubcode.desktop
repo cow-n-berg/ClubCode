@@ -4,3 +4,8 @@ X-Nemo-Application-Type=silica-qt5
 Icon=harbour-clubcode
 Exec=harbour-clubcode
 Name=ClubCode
+
+[X-HarbourBackup]
+BackupPathList=.local/share/harbour-clubcode/
+BackupConfigList=/apps/harbour-clubcode/
+

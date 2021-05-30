@@ -8,6 +8,8 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sat May 30 2021 Arno Dekker <jack.tar@example.com> 0.5-1
+- Added compatibility with MyBackup
 * Tue Apr 13 2021 Arno Dekker <jack.tar@example.com> 0.4-1
 - Added Swedish translation thanks eson57
 * Mon Apr 12 2021 Arno Dekker <jack.tar@example.com> 0.3-18
